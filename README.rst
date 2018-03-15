@@ -58,4 +58,6 @@ Issues
 Contact Us
 ----------
 
-* I am Rodney Chan and the current maintainer of RClimDex. You can contact me at rodney.chan@canada.ca
+* I am `Rodney Chan`_ and the current maintainer of RClimDex. You can contact me at rodney.chan@canada.ca
+
+.. _Rodney Chan: https://github.com/rodneychan-ec

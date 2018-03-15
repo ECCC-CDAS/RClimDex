@@ -1,0 +1,16 @@
+Package: RClimDex
+Version: 1.9-2
+Date: 2017-06-07
+Title: Climate Indecies Calculation software
+Author: Xuebin Zhang, Yang Feng, Rodney Chan
+Maintainer: Rodney Chan <rodney.chan@canada.ca>
+Depends: R (>= 2.15.2), climdex.pcic (>= 1.1-6), PCICt (>= 0.5-4)
+Imports: tcltk (>= 2.15.2)
+Collate: ecui.r ecqc.r rclimdexpatch.r rclimdex.r zzz.r
+Description: The RClimDex provides a friendly graphical user
+     interface to compute all 27 core climate change indices
+     defined by ETCCDI. It also conducts simple quality control
+     on the input daily data.
+License: LGPL-2.1
+URL: http://etccdi.pacificclimate.org/software.shtml
+Packaged: 2017-05-17 21:24:58 UTC; rodney

@@ -1,4 +1,4 @@
-2.0:
+1.9-2:
 Release version.
 Updated manual.
 Removed outlier checking for precipition upper limit in quality control.

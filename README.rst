@@ -40,9 +40,9 @@ Running RClimDex
     > rclimdex.start()
 
 Help
-----
+====
 
-* Please read the `manual`_
+* Please read the `manual`_.
 
 .. _manual: https://github.com/rodneychan-ec/RClimDex/tree/master/inst/doc/manual.pdf
 

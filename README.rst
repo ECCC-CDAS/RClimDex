@@ -28,9 +28,9 @@ Installing RClimDex
 * The latest version of RClimDex can be acquire in the `release page`_. Please install RClimDex as a local package in R. RClimDex now depends on the climdex.pcic. With an internet connection, launch R in the same directory as the RClimDex package. Then run the following commands ::
 
     > install.packages("climdex.pcic")
-    > install.packages(install.packages("RClimDex_1.9-2.tar.gz", repos=NULL, type="source")
+    > install.packages(install.packages("RClimDex_1.9-3.tar.gz", repos=NULL, type="source")
 
-.. _release page: https://github.com/rodneychan-ec/RClimDex/releases
+.. _release page: https://github.com/ECCC-CDAS/RClimDex/releases
 
 Running RClimDex
 ----------------
@@ -44,7 +44,7 @@ Help
 
 * Please read the `manual`_.
 
-.. _manual: https://github.com/rodneychan-ec/RClimDex/tree/master/inst/doc/manual.pdf
+.. _manual: https://github.com/ECCC-CDAS/RClimDex/tree/master/inst/doc/manual.pdf
 
 Issues
 ------
@@ -52,12 +52,12 @@ Issues
 * Please check the `issue page`_ and check if the issue is already reported and its current status.
 * If the issue is not reported yet, please kindly submit a `new issue`_, tag the issue as bug and leave it unassigned. Please describe your issue in as much detail as possible and to include your output.
 
-.. _issue page: https://github.com/rodneychan-ec/RClimDex/issues
-.. _new issue: https://github.com/rodneychan-ec/RClimDex/issues/new
+.. _issue page: https://github.com/ECCC-CDAS/RClimDex/issues
+.. _new issue: https://github.com/ECCC-CDAS/RClimDex/issues/new
 
 Contact Us
 ----------
 
-* I am `Rodney Chan`_ and the current maintainer of RClimDex. You can contact me at rodney.chan@canada.ca
+* I am Rodney Chan of `Climate Data and Analysis Section`_, Environment and Climate Change Canada and the current maintainer of RClimDex. You can contact me at rodney.chan@canada.ca
 
-.. _Rodney Chan: https://github.com/rodneychan-ec
+.. _Climate Data and Analysis Section: https://github.com/ECCC-CDAS

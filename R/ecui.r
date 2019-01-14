@@ -211,7 +211,7 @@ GetFont <- function() {
 ## Parameters are allowed characters (regular expressions), strings to be parsed error message if failed
 ## Please look up regex R help page for more about regular expression
 ParseError <- function(pattern, string, message) {
-  if(attributes(regexec(pattern, string)[[1]]) !=  nchar(string) || nchar(string) == 0)  {
+  if(attr(regexec(pattern, string)[[1]], "match.length") !=  nchar(string) || nchar(string) == 0)  {
         error <- paste("-Error-", message, sep = "\n")
         class(error) <- "try-error"
     return(error)

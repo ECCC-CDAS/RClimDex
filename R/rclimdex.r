@@ -1,7 +1,7 @@
 ## rclimdex.r - RClimDex
 ## R implementation of climdex using PCICt and R tcl/tk graphical interface
 ## Also provides quality control of datasets
-## Last updated by Rodney Chan, April 2017
+## Last updated by Rodney Chan, December 2018
 ## Rewritten by Rodney Chan, July 2014
 ## Rewritten by Yang Feng, July 2004
 ## Intital version by Yujun Ouyang, Mar 2004
@@ -661,7 +661,7 @@ ParseQCParameter <- function() {
   if(class(error) == "try-error") return(error)
 
   ## Special character then file path valid
-  error <- ParseError("[[:alnum:]_:/\b\\-]*", as.character(tclvalue(rclimdex.env$entries.file.loc)), "Output directory must not contain any of these character\n! \" # $ % & \' ( ) * + , . ; < = > ? @ [ ] ^ ` { | } ~")
+  error <- ParseError("[[:alnum:]_.:/\b\\-]*", as.character(tclvalue(rclimdex.env$entries.file.loc)), "Output directory must not contain any of these character\n! \" # $ % & \' ( ) * + , ; < = > ? @ [ ] ^ ` { | } ~")
   if(class(error) == "try-error") return(error)
   filepath <- as.character(tclvalue(rclimdex.env$entries.file.loc))
   filepath <- substr(filepath, 1, nchar(filepath) - 1)
@@ -703,7 +703,7 @@ ParseICParameter <- function(dataset) {
     class(error) <- "try-error"
   }
   if(class(error) == "try-error") return(error)
-  error <- ParseError("[[:alnum:]_:/\b\\-]*", as.character(tclvalue(rclimdex.env$entries.file.loc)), "Output directory must not contain any of these character\n! \" # $ % & \' ( ) * + , . ; < = > ? @ [ ] ^ ` { | } ~")
+  error <- ParseError("[[:alnum:]_.:/\b\\-]*", as.character(tclvalue(rclimdex.env$entries.file.loc)), "Output directory must not contain any of these character\n! \" # $ % & \' ( ) * + , ; < = > ? @ [ ] ^ ` { | } ~")
   if(class(error) == "try-error") return(error)
   filepath <- as.character(tclvalue(rclimdex.env$entries.file.loc))
   filepath <- substr(filepath, 1, nchar(filepath) - 1)

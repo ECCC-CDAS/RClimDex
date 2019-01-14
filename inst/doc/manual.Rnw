@@ -12,7 +12,7 @@
 
 \begin{document}
 
-\title{Introduction to RClimDex v2}
+\title{Introduction to RClimDex v1.9}
 \author{Xuebin Zhang, Yang Feng and Rodney Chan\\ \\
 Climate Research Division\\
 Environment Canada\\

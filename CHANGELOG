@@ -1,5 +1,9 @@
+1.9-3:
+Updated parse function that was causing issues with R version 3.5.1.
+Updated manual to reflect change of trend and plot are no longer produced.
+Updated URL in description.
+
 1.9-2:
-Release version.
 Updated manual.
 Removed outlier checking for precipition upper limit in quality control.
 

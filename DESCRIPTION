@@ -1,6 +1,6 @@
 Package: RClimDex
-Version: 1.9-2
-Date: 2017-06-07
+Version: 1.9-3
+Date: 2018-12-12
 Title: Climate Indecies Calculation software
 Author: Xuebin Zhang, Yang Feng, Rodney Chan
 Maintainer: Rodney Chan <rodney.chan@canada.ca>
@@ -12,5 +12,5 @@ Description: The RClimDex provides a friendly graphical user
      defined by ETCCDI. It also conducts simple quality control
      on the input daily data.
 License: LGPL-2.1
-URL: http://etccdi.pacificclimate.org/software.shtml
-Packaged: 2017-06-28 21:16:38 UTC; rodney
+NeedsCompilation: no
+Packaged: 2018-12-12 22:03:53 UTC; rrc001

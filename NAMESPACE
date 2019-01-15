@@ -1,3 +1,0 @@
-import(climdex.pcic)
-import(tcltk)
-export(rclimdex.start)

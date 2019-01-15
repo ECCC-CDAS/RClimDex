@@ -33,7 +33,7 @@ Contact Us
 ----------
 
 * I am Rodney Chan of `Climate Data and Analysis Section`_, Environment and Climate Change Canada and the current maintainer of RClimDex. You can contact me at rodney.chan@canada.ca
-* Please note that RClimDex1.1 is an old release and is not currently being maintained. Please see out latest release of RClimdex `here`_.
+* Please note that RClimDex1.1 is an old release and is not currently being maintained. Please see out latest releases of RClimdex `here`_.
 
 .. _Climate Data and Analysis Section: https://github.com/ECCC-CDAS
 .. _here: https://github.com/ECCC-CDAS/RClimDex/releases

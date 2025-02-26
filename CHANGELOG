@@ -64,6 +64,6 @@ Updated missing marker to accept character values.
 Updated thresholds such that some indices calculation are skiped when there are too many NA.
 
 0.1-4:
-Initial version.
+Initial developmental version for RClimDex2.0.
 Updated GSL. There were issues in counting one less day in old RClimdex. (missing +1)
 Updated TNn. There were issues with January, even one NA will trigger NA for that month. (missing na.rm=T)

@@ -29,7 +29,7 @@ Installing RClimDex
 
     > install.packages('PCICt')
     > install.packages('https://pacificclimate.org/R/climdex.pcic_1.1-11.tar.gz')
-    > install.packages(install.packages("RClimDex-2.0.tar.gz", repos=NULL, type="source")
+    > install.packages(install.packages("RClimDex-2.0.tar.gz", repos=NULL, type="source"))
 
 .. _release page: https://github.com/ECCC-CDAS/RClimDex/releases
 

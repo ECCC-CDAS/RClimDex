@@ -1,3 +1,13 @@
+2.0:
+Releases on Open Data Inventory alongside related projects at Open Government Canada.
+Update manual reflecting changes to installing the dependency, climdex.pcic.
+Updated R version requirment from 2.1.15 to 4.1.2.
+Updated dependency requriment from climdex.pcic version 1.1-6 to 1.1-11.
+Updated dependency requriment from climdex.pcic version 0.5-4 to 0.5-4.4.
+Updated man pages for RClimDex.
+Change outputs to append filenames instead of overwriting existing file.
+Fix minor bug where QC for dates are skipped.
+
 1.9-3:
 Updated parse function that was causing issues with R version 3.5.1.
 Updated manual to reflect change of trend and plot are no longer produced.
@@ -22,7 +32,7 @@ Updated manual to reflect UX change for station selection.
 Edits to FD0,SU25,TR20,ID0 to FD,SU,TR,ID to be more consistent.
 
 1.8-1:
-Made some minor edits to vignettes in terms spelling, grammer and structure.
+Made some minor edits to the manual in terms spelling, grammer and structure.
 
 1.8:
 Change the version numbering from 0.1-8 -> 1.8.

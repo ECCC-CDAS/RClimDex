@@ -27,8 +27,9 @@ Installing RClimDex
 
 * The latest version of RClimDex can be acquire in the `release page`_. Please install RClimDex as a local package in R. RClimDex now depends on the climdex.pcic. With an internet connection, launch R in the same directory as the RClimDex package. Then run the following commands ::
 
-    > install.packages("climdex.pcic")
-    > install.packages(install.packages("RClimDex-1.9-3.tar.gz", repos=NULL, type="source")
+    > install.packages('PCICt')
+    > install.packages('https://pacificclimate.org/R/climdex.pcic_1.1-11.tar.gz')
+    > install.packages(install.packages("RClimDex-2.0.tar.gz", repos=NULL, type="source")
 
 .. _release page: https://github.com/ECCC-CDAS/RClimDex/releases
 

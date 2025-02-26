@@ -80,7 +80,7 @@ AllNumeric <- function(series) {
 ## Parameters are dataset, colname and evaluation criteria
 ## Evaulation criteria for example 'max' for max()
 ## Options are second evaluation statment, override column flag, unassigned column flag
-AssignCol <- function(dataset, label, fun, criteria = NULL, override = FALSE, unknown = "data") {
+AssignCol <- function(dataset, label, fun, rule = NULL, override = FALSE, unknown = "data") {
   if(fun != "sum") {
     result <- lapply(dataset, eval(parse(text = fun)), na.rm = TRUE)
   } else {

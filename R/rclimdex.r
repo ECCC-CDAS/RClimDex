@@ -1,7 +1,7 @@
 ## rclimdex.r - RClimDex
 ## R implementation of climdex using PCICt and R tcl/tk graphical interface
 ## Also provides quality control of datasets
-## Last updated by Rodney Chan, December 2018
+## Last updated by Rodney Chan, September 2023
 ## Rewritten by Rodney Chan, July 2014
 ## Rewritten by Yang Feng, July 2004
 ## Intital version by Yujun Ouyang, Mar 2004
@@ -10,6 +10,7 @@
 #source('ecqc.r')
 #source('ecui.r')
 #source('rclimdexpatch.r')
+#source('daysopthreshold.r')
 
 ## Requires climdex.pcic and PCICt
 library(climdex.pcic)

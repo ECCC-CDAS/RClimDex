@@ -8,8 +8,8 @@ library(tcltk)
 
 ## Write out a CSV formatted table given the dataset, header and output location
 WriteTable <- function(dataset, label, outpath) {
-  write.table(label, file = outpath, append = FALSE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
-  write.table(dataset, file = outpath, append = TRUE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
+  write.table(label, file = FileExists(outpath), append = FALSE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
+  write.table(dataset, file = FileExists(outpath), append = TRUE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
 }
 
 ## Write out the trend of a dataset in CSV format given the dataset and output location
@@ -28,10 +28,10 @@ WriteTrend <- function(dataset, outpath, name = "", label = FALSE) {
         options(warn=2)
         stat <- GetStat(fit)
     ## Append table with a single row: rowname, trend results
-    write.table(cbind(name, dataset[1, 1], dataset[nrow(dataset), 1], stat$beta, stat$betaerror, stat$pvalue), file = outpath, append = TRUE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
+    write.table(cbind(name, dataset[1, 1], dataset[nrow(dataset), 1], stat$beta, stat$betaerror, stat$pvalue), file = FileExists(outpath), append = TRUE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
   } else {
     ## New file with colname in first row
-    write.table(dataset, file = outpath, append = FALSE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
+    write.table(dataset, file = FileExists(outpath), append = FALSE, quote = FALSE, sep = ",", row.names = FALSE, col.names = FALSE)
   }
 }
 
@@ -39,7 +39,7 @@ WriteTrend <- function(dataset, outpath, name = "", label = FALSE) {
 ## Options are for title, x-axis label and y-axis label
 WritePlot <- function(dataset, outpath, main = "", xlab = "", ylab = "") {
 #  jpeg(outpath, width = 1024, height = 768) Write out pre-defined plot in 1024x768 jpeg format given the dataset and output location
-  pdf(file = outpath, width = 14.23, height = 10.67)
+  pdf(file = FileExists(outpath), width = 14.23, height = 10.67)
   original <- par(no.readonly = TRUE)
   par(cex = 2, mgp = c(2.5, 0.5, 0))
   plot(dataset, xlab = xlab, ylab = ylab, type = "b")
@@ -62,7 +62,7 @@ WritePlot <- function(dataset, outpath, main = "", xlab = "", ylab = "") {
 ## Write our pre-defined time-series plot in pdf format given the dataset and output location
 ## Options are type of plot (defaults to line plot), title, variable name, units, x-axis label, y-axis label, positive only flag and distribution plot flag along with dplot title
 WriteTimeSeries <- function(dataset, outpath, type = "l", name = "", var = "", unit = NULL, xlab = "", ylab = "", yzero = FALSE, distribution = FALSE, dtitle = "") {
-  pdf(file = outpath)
+  pdf(file = FileExists(outpath))
   original <- par(no.readonly = TRUE)
   ## Can draw distritbution plot on first page
   if(distribution) {
@@ -428,4 +428,18 @@ DisplayObject <- function(object, row, column, padx, pady, sticky) {
 ## Close given frame/window from given environment
 Quit <- function(frame, env = .GlobalEnv) {
   tkdestroy(get(frame, envir = env))
+}
+
+## Append filename if already exists to not overwrite file
+FileExists <- function(filename) {
+  counter <- 1
+  tmpname <- filename
+  if(!file.exists(tmpname)) return(tmpname)
+  while(file.exists(tmpname)) {
+  if(grepl('\\.txt',tmpname)||grepl('\\.csv',tmpname)) {
+    ctable <- read.table(tmpname)
+    if(nrow(ctable)==1) { return(tmpname) } }
+  tmpname <- paste(filename,'.',counter,sep='')
+  counter <- counter + 1 }
+  return(tmpname)
 }

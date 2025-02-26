@@ -2,9 +2,10 @@
 \usepackage[titletoc]{appendix}
 \usepackage{gensymb}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{mathtools}
 \usepackage{enumitem}
+\usepackage{varioref}
+\usepackage{hyperref}
 \usepackage{cleveref}
 \hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
 \setlength{\parindent}{0 cm}
@@ -12,7 +13,7 @@
 
 \begin{document}
 
-\title{Introduction to RClimDex v1.9}
+\title{Introduction to RClimDex version 2}
 \author{Xuebin Zhang, Yang Feng and Rodney Chan\\ \\
 Climate Research Division\\
 Environment Canada\\
@@ -23,8 +24,8 @@ Canada}
 
 \vskip 13cm
 
-\centerline{Maintained by Rodney Chan}
-\centerline{Please contact \href{rodney.chan@canada.ca}{rodney.chan@canada.ca} for any question or comment.}
+\centerline{Maintained by Rodney Chan, Environment and Climate Change Canada.}
+\centerline{Please contact \href{rodney.chan@ec.gc.ca}{rodney.chan@ec.gc.ca} for any question or comment.}
 
 \newpage
 
@@ -34,7 +35,7 @@ Canada}
 
 \centerline{Acknowledgements to version 1}
 \vskip 0.5cm
-\par{The initial version of RClimDex was developed by Xuebin Zhang and Yang Feng at the Climate Research Branch of Meteorological Service of Canada. Its initial development was funded by the Canadian International Development Agency through the Canada China Climate Change Cooperation (C5) Project. Lisa Alexander, Francis Zwiers, Byron Gleason, David Stephenson, Albert Klan Tank, Mark New, Lucie Vincent, and Tom Peterson made important contributions to the development and testing of the package. Jose Luis Santos at CIIFEN helped to translate this document into Spanish. Earlier versions of RClimDex have been used during CCl/CLIVAR ETCCDI workshops in Cape Town, South Africa, May 31-June 4, 2004, and in Maceio, Brazil, August 9-14, 2004. The lectures and attendees of the workshops provided very valuable suggestions for the improvement of RClimDex.}
+\par{The initial version of RClimDex was developed by Xuebin Zhang and Yang Feng at the Climate Research Branch of Meteorological Service of Canada. Its initial development was funded by the Canadian International Development Agency through the Canada China Climate Change Cooperation (C5) Project. Lisa Alexander, Francis Zwiers, Byron Gleason, David Stephenson, Albert Klan Tank, Mark New, Lucie Vincent, and Tom Peterson made important contributions to the development and testing of the package. Jose Luis Santos at CIIFEN helped to translate this document into Spanish. Earlier versions of RClimDex have been used during CCl/CLIVAR ETCCDI workshops in Cape Town, South Africa, May 31-June 4, 2004, and in Maceio, Brazil, August 9-14, 2004. The lectures and attendees of the workshops provided very valuable suggestions for the improvement of RClimDex. Yujun Ouyang contributed to software support.}
 \vskip 0.5cm
 \centerline{Acknowledgements to version 2}
 \vskip 0.5cm
@@ -48,13 +49,24 @@ Canada}
 \begin{enumerate}
 \item Indices calculation replaced by climdex.pcic from RClimDex
 \item Batch processing support
-\item UX overhaul
+\item User experience overhaul
 \end{enumerate}
-\vskip 0.5cm
 \par{Changelog}
 \vskip 0.5cm
 \par{2.0:\\
-Release version.\\
+Releases on Open Data Inventory alongside related projects at Open Government Canada.\\
+Update manual reflecting changes to installing the dependency, climdex.pcic.\\
+Updated R version requirment from 2.1.15 to 4.1.2.\\
+Updated dependency requriment from climdex.pcic version 1.1-6 to 1.1-11.\\
+Updated dependency requriment from climdex.pcic version 0.5-4 to 0.5-4.4.\\
+Updated man pages for RClimDex.\\
+Change outputs to append filenames instead of overwriting existing file.\\
+Fix minor bug where QC for dates are skipped.\\ \\
+1.9-3:\\
+Updated parse function that was causing issues with R version 3.5.1.\\
+Updated manual to reflect change of trend and plot are no longer produced.\\
+Updated URL in description.\\ \\
+1.9-2:\\
 Updated manual.\\
 Removed outlier checking for precipition upper limit in quality control.\\ \\
 1.9-1:\\
@@ -69,7 +81,7 @@ Updated manual to reflect UX change for station selection.\\ \\
 1.8-2:\\
 Edits to FD0,SU25,TR20,ID0 to FD,SU,TR,ID to be more consistent.\\ \\
 1.8-1:\\
-Made some minor edits to vignettes in terms of spelling, grammer and structure.\\ \\
+Made some minor edits to the manual in terms of spelling, grammer and structure.\\ \\
 1.8:\\
 Change the version numbering from 0.1-8 -> 1.8.\\
 Remove support for LS trend and plots for indices calculation.\\
@@ -152,17 +164,19 @@ Updated TNn. There were issues with January, even one NA will trigger NA for tha
 \section{Installation of RClimDex}
 \label{sec:install}
 
-\par{RClimDex is now an \R{} package. Most recent version of RClimDex is avaliable from the ETCCDI website at \href{http://etccdi.pacificclimate.org/software.shtml}{http://etccdi.pacificclimate.org/software.shtml}, where registration is required. Please install RClimDex as a local package in \R{}. RClimDex now depends on the climdex.pcic. With an internet connection, launch \R{} in the same directory as the RClimDex package. Then run the following commands:}
+\par{RClimDex is now an \R{} package. Most recent version of RClimDex is avaliable from the ECCC-CDAS GitHub website at \href{https://github.com/ECCC-CDAS}{https://github.com/ECCC-CDAS}. Please install RClimDex as a local package in \R{}. RClimDex now depends on the climdex.pcic. climdex.pcic is avaliable from Pacific Climate Impacts Consortium's GitHub website at \href{https://github.com/pacificclimate}{https://github.com/pacificclimate}. Once RClimDex is downloaded, please launch \R{} in the same directory as the RClimDex package. Internet access is required during installation. Then run the following commands:\\}
+
+\par{Please note the version number and make adjustment to the commands as necessary.}
 
 \begin{verbatim}
-install.packages("climdex.pcic")
+install.packages("PCICt")
+install.packages("https://pacificclimate.org/R/climdex.pcic_1.1
+-11.tar.gz", repos=NULL, type="source")
 
-install.packages("RClimDex_1.9-1.tar.gz", repos=NULL, type="source")
+install.packages("RClimDex_2.0.tar.gz", repos=NULL, type="source")
 \end{verbatim}
 
-\par{Select a CRAN mirror to install or update the \R{} package of climdex.pcic then run the other command to install RClimDex.\\}
-
-\par{RClimDex has been developed under \R{} 2.15.2. This version of RClimDex depends on the \R{} library of climdex.pcic (Version 1.1-6) and PCICt (Version 0.5-4) for computing the 27 core indices as well as the \R{} library of Tcl/Tk (Version 2.15.2) for the graphical user interface. The depended \R{} libraries will be downloaded and installed automatically during the installation of the RClimDex package.\\}
+\par{RClimDex has been developed under \R{} 4.1.2. This version of RClimDex depends on the \R{} library of climdex.pcic (Version 1.1-11) and PCICt (Version 0.5-4.4) for computing the 27 core indices as well as the \R{} library of Tcl/Tk (Version 4.1.2) for the graphical user interface. The depended \R{} libraries will be downloaded and installed automatically during the installation of the RClimDex package.\\}
 
 \par{For Windows, you may change the current \R{} working directory by clicking on the top menu under \textit{File} then \textit{Change dir...}, afterwards select the directory where you store the RClimDex package before installing.\\}
 

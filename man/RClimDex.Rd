@@ -17,10 +17,10 @@ other ET workshops.
 \tabular{ll}{
 Package: \tab RClimDex\cr
 Type: \tab Package\cr
-Version: \tab 1.8-2\cr
-Date: \tab 2015-11-06\cr
-Depends: \tab R (>= 2.15.2), climdex.pcic (>= 1.1-6), PCICt (>= 0.5-1)\cr
-Imports: \tab tcltk (>= 2.15.2)\cr
+Version: \tab 2.0\cr
+Date: \tab 2023-09-08\cr
+Depends: \tab R (>= 4.1.2), climdex.pcic (>= 1.1-11), PCICt (>= 0.5-4.4)\cr
+Imports: \tab tcltk (>= 4.1.2)\cr
 License: \tab LGPL-2.1\cr
 }
 
@@ -31,9 +31,9 @@ rclimdex.start()          Start Graphical User Interface of RClimDex
 
 }
 \author{
-Xuebin Zhang, Yang Feng, Rodney Chan, Yujun Ouyang
+Xuebin Zhang, Yang Feng, Rodney Chan
 
-Maintainer: Yang Feng \email{yfeng@ec.gc.ca}
+Maintainer: Rodney Chan \email{rodney.chan@ec.gc.ca}
 }
 \references{
 \url{http://etccdi.pacificclimate.org/list_27_indices.shtml}

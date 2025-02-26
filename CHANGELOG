@@ -1,5 +1,4 @@
 2.0:
-Releases on Open Data Inventory alongside related projects at Open Government Canada.
 Update manual reflecting changes to installing the dependency, climdex.pcic.
 Updated R version requirment from 2.1.15 to 4.1.2.
 Updated dependency requriment from climdex.pcic version 1.1-6 to 1.1-11.
